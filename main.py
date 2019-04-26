@@ -52,7 +52,7 @@ def users():
 		cursor.close() 
 		conn.close()
 		
-@app.route('/user/')
+@app.route('/user/<id>')
 def user(id):
 	try:
 		conn = mysql.connect()
@@ -98,7 +98,7 @@ def update_user():
 		cursor.close() 
 		conn.close()
 		
-@app.route('/delete/')
+@app.route('/delete/<id>')
 def delete_user(id):
 	try:
 		conn = mysql.connect()
